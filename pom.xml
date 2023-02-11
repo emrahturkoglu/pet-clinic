@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.emrah</groupId>
     <artifactId>petclinic</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>02-pet-clinic</name>
     <description>02-pet-clinic</description>
     <properties>
@@ -41,8 +41,8 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/emrahturkoglu/pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+        <developerConnection>scm:git:http://github.com/emrahturkoglu/pet-clinic.git</developerConnection>
+      <tag>petclinic-0.0.2</tag>
   </scm>
 
 </project>
