@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.emrah</groupId>
     <artifactId>petclinic</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
     <name>02-pet-clinic</name>
     <description>02-pet-clinic</description>
     <properties>
@@ -32,6 +32,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <checkModificationExcludes>
                         <checkModificationExclude>pom.xml</checkModificationExclude>
                     </checkModificationExcludes>
@@ -42,7 +43,7 @@
 
     <scm>
         <developerConnection>scm:git:http://github.com/emrahturkoglu/pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>petclinic-0.0.3</tag>
   </scm>
 
 </project>
