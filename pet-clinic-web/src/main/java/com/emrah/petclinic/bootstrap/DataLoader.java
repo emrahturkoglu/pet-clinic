@@ -6,19 +6,16 @@ import com.emrah.petclinic.service.OwnerService;
 import com.emrah.petclinic.service.VetService;
 import com.emrah.petclinic.service.map.OwnerMapService;
 import com.emrah.petclinic.service.map.VetMapService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
-
-    public DataLoader() {
-        ownerService = new OwnerMapService();
-        vetService = new VetMapService();
-    }
 
     @Override
     public void run(String... args) throws Exception {
