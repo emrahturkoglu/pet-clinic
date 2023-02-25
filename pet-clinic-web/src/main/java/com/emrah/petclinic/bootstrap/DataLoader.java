@@ -1,8 +1,10 @@
 package com.emrah.petclinic.bootstrap;
 
 import com.emrah.petclinic.model.Owner;
+import com.emrah.petclinic.model.PetType;
 import com.emrah.petclinic.model.Vet;
 import com.emrah.petclinic.service.OwnerService;
+import com.emrah.petclinic.service.PetTypeService;
 import com.emrah.petclinic.service.VetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -12,11 +14,20 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
-    private final OwnerService ownerService;
     private final VetService vetService;
+    private final OwnerService ownerService;
+    private final PetTypeService petTypeService;
 
     @Override
     public void run(String... args) {
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogPetType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        dog.setName("Cat");
+        PetType savedCatPetType = petTypeService.save(cat);
+
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
