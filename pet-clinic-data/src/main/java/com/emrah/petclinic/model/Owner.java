@@ -1,16 +1,19 @@
 package com.emrah.petclinic.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.Cascade;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+
 @Entity
 @Getter
 @Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "owners")
 public class Owner extends Person {
 
