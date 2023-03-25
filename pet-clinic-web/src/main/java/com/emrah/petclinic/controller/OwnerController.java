@@ -1,11 +1,14 @@
 package com.emrah.petclinic.controller;
 
+import com.emrah.petclinic.model.Owner;
 import com.emrah.petclinic.service.OwnerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequiredArgsConstructor
@@ -23,5 +26,13 @@ public class OwnerController {
     @GetMapping({"/find"})
     public String findOwners() {
         return("notImplemented");
+    }
+
+    @GetMapping("/{ownerId}")
+    public ModelAndView showOwner(@PathVariable("ownerId") Long ownerId) {
+        ModelAndView mav = new ModelAndView("owners/ownerDetails");
+        Owner owner = ownerService.findById(ownerId);
+        mav.addObject(owner);
+        return mav;
     }
 }
